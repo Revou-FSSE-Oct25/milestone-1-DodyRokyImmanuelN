@@ -59,12 +59,6 @@ The purpose of this website is to:
 
 ---
 
-## 🚀 Live Demo
-
-🔗 **Visit my website here:**  
-👉 [https://revou-fsse-oct25.github.io/milestone-1-DodyRokyImmanuelN/](https://revou-fsse-oct25.github.io/milestone-1-DodyRokyImmanuelN/)
-
----
 
 ## 📁 Project Structure
 
