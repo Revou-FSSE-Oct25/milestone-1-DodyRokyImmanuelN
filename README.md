@@ -1,1 +1,78 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/KTVBmApB)
+# 🌐 Dody Roky Immanuel Portfolio Website
+
+## 🧭 Overview
+
+This is the **personal portfolio website** of **Dody Roky Immanuel Nainggolan**, created as part of **RevoU Full Stack Software Engineering – Module 1 Assignment**.  
+The website serves as an **online resume** and **personal brand**, introducing who I am, showcasing my skills, and preparing space for future projects.
+
+It is the first version of my portfolio, built entirely with **HTML and CSS**, and hosted on **GitHub Pages**.
+
+---
+
+## 🎯 Purpose
+
+The purpose of this website is to:
+
+- Establish an online presence and professional identity.
+- Showcase my journey as a budding web developer.
+- Provide visitors and potential employers an overview of my skills, interests, and contact details.
+
+---
+
+## 🧱 Features Implemented
+
+### 🏠 Home Section
+
+- Hero introduction with my name, tagline, and short description.
+- Navigation link to the contact section.
+
+### 👨‍💻 About Section
+
+- Brief biography describing who I am, my background, and my interests in web development and AI.
+- List of technologies and topics I’m currently learning.
+- Profile photo included for personal touch.
+
+### 💼 Projects Section
+
+- Displays one completed project with a detailed description and technology tags.
+- Placeholder for future projects ("More Projects Coming Soon...").
+
+### ✉️ Contact Section
+
+- Functional contact form with:
+  - **Name**, **Email**, and **Message** fields
+  - `required` attribute for basic validation
+  - Proper `<label>` association for accessibility.
+
+### ⚙️ Structure
+
+- Semantic HTML elements (`<main>`, `<header>`, `<section>`, `<article>`, `<footer>`) for clean and accessible layout.
+- Organized indentation for readability.
+
+---
+
+## 🧰 Technologies Used
+
+- **HTML5** — Page structure and content layout
+- **CSS3** — Visual styling and responsive design (in `style.css`)
+- **GitHub Pages** — Hosting and deployment platform
+
+---
+
+## 🚀 Live Demo
+
+🔗 **Visit my website here:**  
+👉 [https://revou-fsse-oct25.github.io/milestone-1-DodyRokyImmanuelN/](https://revou-fsse-oct25.github.io/milestone-1-DodyRokyImmanuelN/)
+
+---
+
+## 📁 Project Structure
+
+milestone-1-DodyRokyImmanuelN/
+│
+├── index.html # Main HTML file
+├── style.css # External CSS stylesheet
+├── foto.jpeg # Profile photo
+├── favicon.png # Favicon
+├── Project1.png # Example project image
+└── README.md # Project documentation (this file)
