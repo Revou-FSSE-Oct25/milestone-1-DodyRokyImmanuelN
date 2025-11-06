@@ -21,25 +21,30 @@ The purpose of this website is to:
 ## 🧱 Features Implemented
 
 ### 🏠 Home Section
+
 - Hero introduction with my name, tagline, and short description.
 - Navigation link to the contact section.
 
 ### 👨‍💻 About Section
+
 - Brief biography describing who I am, my background, and my interests in web development and AI.
 - List of technologies and topics I'm currently learning.
 - Profile photo included for personal touch.
 
 ### 💼 Projects Section
+
 - Displays one completed project with a detailed description and technology tags.
 - Placeholder for future projects ("More Projects Coming Soon...").
 
 ### ✉️ Contact Section
+
 - Functional contact form with:
   - **Name**, **Email**, and **Message** fields
   - `required` attribute for basic validation
   - Proper `<label>` association for accessibility.
 
 ### ⚙️ Structure
+
 - Semantic HTML elements (`<main>`, `<header>`, `<section>`, `<article>`, `<footer>`) for clean and accessible layout.
 - Organized indentation for readability.
 
@@ -68,25 +73,28 @@ milestone-1-DodyRokyImmanuelN/
 
 ---
 
-
 ## 🧩 How to View Locally
 
 If you want to run this project on your own computer, follow these steps:
 
 ### 1. Clone this repository
+
 ```bash
 git clone https://github.com/Revou-FSSE-Oct25/milestone-1-DodyRokyImmanuelN.git
 ```
 
 ### 2. Open the project folder
+
 ```bash
 cd milestone-1-DodyRokyImmanuelN
 ```
 
 ### 3. Run the project
+
 Locate the `index.html` file inside the project folder.
 
 Open it in your preferred browser by either:
+
 - Double-clicking the `index.html` file, or
 - Dragging and dropping it into your browser window.
 
