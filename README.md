@@ -73,6 +73,13 @@ milestone-1-DodyRokyImmanuelN/
 
 ---
 
+## 🌍 Live Demo
+
+🔗 **Visit the live website here:**  
+[https://revou-fsse-oct25.github.io/milestone-1-DodyRokyImmanuelN/](https://revou-fsse-oct25.github.io/milestone-1-DodyRokyImmanuelN/)
+
+---
+
 ## 🧩 How to View Locally
 
 If you want to run this project on your own computer, follow these steps:
