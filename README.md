@@ -2,7 +2,7 @@
 
 ## 🧭 Overview
 
-This is the **personal portfolio website** of **Dody Roky Immanuel Nainggolan**, created as part of **RevoU Full Stack Software Engineering – Module 1 Assignment**.
+This is the **personal portfolio website** of **Dody Roky Immanuel Nainggolan**, created as part of **RevoU Full Stack Software Engineering – Milestone 1 Assignment**.
 
 The website serves as an **online resume** and **personal brand**, introducing who I am, showcasing my skills, and preparing space for future projects. It is the first version of my portfolio, built entirely with **HTML and CSS**, and hosted on **GitHub Pages**.
 
