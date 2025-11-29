@@ -819,7 +819,7 @@ footer p {
 .lang-toggle:hover::before {
   background: rgba(0, 0, 0, 0.15);
 }
-.lang-toggle[data-lang="id"] {
+.lang-toggle[data-lang="en"] {
   background-image: url("https://flagcdn.com/w320/id.png");
   box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
   color: white;
@@ -827,8 +827,8 @@ footer p {
     0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Saat bahasa English aktif (tampilkan bendera Amerika) */
-.lang-toggle[data-lang="en"] {
+/* Saat bahasa English aktif */
+.lang-toggle[data-lang="id"] {
   background-image: url("https://flagcdn.com/w320/us.png");
   box-shadow: 0 8px 25px rgba(178, 34, 52, 0.4);
   color: white;
