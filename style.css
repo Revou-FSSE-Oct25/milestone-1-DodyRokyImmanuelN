@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   line-height: 1.6;
   color: #2d3748;
   background: #fafafa;
@@ -141,6 +141,7 @@ nav {
   margin-bottom: 1.5rem;
 }
 
+/* FIX: Typing effect yang lebih responsive */
 .typing-effect {
   display: inline-block;
   font-size: 1.5rem;
@@ -148,9 +149,17 @@ nav {
   line-height: 1.5;
   max-width: 100%;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
   border-right: 3px solid rgba(255, 255, 255, 0.8);
-  animation: typing 4s steps(70, end), blink 0.8s step-end infinite;
+  animation: fadeInUp 0.8s ease-out, blink 0.8s step-end infinite;
+}
+
+/* Untuk layar besar, tetap pakai nowrap */
+@media (min-width: 769px) {
+  .typing-effect {
+    white-space: nowrap;
+    animation: typing 4s steps(70, end), blink 0.8s step-end infinite;
+  }
 }
 
 /* Untuk layar kecil, matikan animasi typing agar text bisa wrap */
@@ -273,6 +282,7 @@ nav {
   outline: 2px solid #667eea;
   outline-offset: 2px;
 }
+
 /* --- Animations --- */
 @keyframes fadeInUp {
   from {
@@ -297,6 +307,26 @@ nav {
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -730,6 +760,148 @@ footer p {
 
 .menu-icon:hover {
   color: #667eea;
+}
+/* Sembunyikan tombol di navigation */
+.nav-links li:has(#lang-toggle) {
+  display: none;
+}
+
+/* Floating Badge Style */
+.lang-toggle {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  top: auto !important;
+  left: auto !important;
+  width: 49px;
+  height: 49px;
+  /* Default: Gambar Bendera Amerika */
+  background-image: url("https://flagcdn.com/w320/us.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.9); /* Border juga dikecilkan */
+  border-radius: 50%;
+  cursor: pointer;
+  /* Text styling untuk ID/EN */
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), -1px -1px 3px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 999;
+  animation: float 3s ease-in-out infinite;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Overlay gelap tipis untuk bikin text lebih keliatan */
+.lang-toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+/* Hover: overlay jadi lebih terang sedikit */
+.lang-toggle:hover::before {
+  background: rgba(0, 0, 0, 0.15);
+}
+.lang-toggle[data-lang="id"] {
+  background-image: url("https://flagcdn.com/w320/id.png");
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9), -1px -1px 3px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Saat bahasa English aktif (tampilkan bendera Amerika) */
+.lang-toggle[data-lang="en"] {
+  background-image: url("https://flagcdn.com/w320/us.png");
+  box-shadow: 0 8px 25px rgba(178, 34, 52, 0.4);
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9), -1px -1px 3px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Shine effect */
+.lang-toggle::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.lang-toggle:hover::after {
+  left: 100%;
+}
+
+/* Hover effect */
+.lang-toggle:hover {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+  animation: pulse 1.5s ease-in-out infinite;
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.lang-toggle:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .lang-toggle {
+    width: 42px;
+    height: 42px;
+    font-size: 0.77rem;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+}
+
+/* Smooth transition for content */
+[data-i18n] {
+  transition: opacity 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-switching [data-i18n] {
+  animation: fadeIn 0.3s ease;
 }
 
 /* --- Responsif: Tablet --- */

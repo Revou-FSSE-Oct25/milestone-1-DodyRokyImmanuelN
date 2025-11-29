@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <button id="lang-toggle" class="lang-toggle" aria-label="Switch language" data-tooltip="English" data-lang="en">
+        EN
+    </button>
+
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
@@ -20,10 +24,10 @@
             <label for="menu-toggle" class="menu-icon">☰</label>
 
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -32,41 +36,42 @@
         <!-- Home Section -->
         <header id="home" class="hero">
             <div class="hero-content">
-                <p class="intro-text">Hey there 👋, I'm</p>
+                <p class="intro-text" data-i18n="hero.greeting">Hey there 👋, I'm</p>
                 <h1>Dody Roky Immanuel Nainggolan</h1>
-                <h2 class="typing-effect">Code is poetry written in a language only computers can understand</h2>
-                <p class="description">
+                <h2 class="typing-effect" data-i18n="hero.tagline">Code is poetry written in a language only computers
+                    can understand</h2>
+                <p class="description" data-i18n="hero.description">
                     Currently learning web development and trying to make cool things.
                     Still figuring things out but enjoying the journey!
                 </p>
-                <a href="#contact" class="btn">Let's Talk</a>
+                <a href="#contact" class="btn" data-i18n="hero.cta">Let's Talk</a>
             </div>
         </header>
 
         <!-- About Section -->
         <section id="about">
             <div class="container">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
 
                 <div class="about-grid">
                     <article class="about-text">
-                        <p>
+                        <p data-i18n="about.paragraph1">
                             Hi! I'm an aspiring software engineer who loves turning ideas into
-                            something that actually works. I started coding out of curiosity — wondering how
-                            apps and websites are built — and somehow it became one of my favorite things to do.
+                            something that actually works. I started coding out of curiosity, wondering how
+                            apps and websites are built and somehow it became one of my favorite things to do.
                         </p>
 
-                        <p>
+                        <p data-i18n="about.paragraph2">
                             I'm currently pursuing a degree in Informatics Engineering at Universitas Riau.
                             My main focus is on improving my skills in web development and exploring the world of
                             artificial intelligence.
                             I love mixing logic and creativity to solve real-world problems.
                         </p>
 
-                        <p>
+                        <p data-i18n="about.paragraph3">
                             When I'm not coding, I enjoy reading about technology, sketching ideas,
                             or experimenting with new tools just to see what they can do.
-                            I believe learning never stops — and that’s what keeps things exciting.
+                            I believe learning never stops and that's what keeps things exciting.
                         </p>
 
                         <!-- Social Media Links -->
@@ -82,11 +87,11 @@
                                     class="social-icon" width="35" height="35">
                             </a>
                         </div>
-                        <h3>Things I Work With:</h3>
+                        <h3 data-i18n="about.skillsTitle">Things I Work With:</h3>
                         <ul class="skills">
-                            <li>Web Development</li>
-                            <li>Machine Learning</li>
-                            <li>Still learning more...</li>
+                            <li data-i18n="about.skills.webdev">Web Development</li>
+                            <li data-i18n="about.skills.ml">Machine Learning</li>
+                            <li data-i18n="about.skills.learning">Still learning more...</li>
                         </ul>
                     </article>
 
@@ -102,16 +107,16 @@
         <!-- Projects Section -->
         <section id="projects">
             <div class="container">
-                <h2 class="section-title">Stuff I've Built</h2>
-                <p class="section-subtitle">Not really cool, but I hope you like it!</p>
+                <h2 class="section-title" data-i18n="projects.title">Stuff I've Built</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Not really cool, but I hope you like it!</p>
 
                 <div class="projects-container">
                     <div class="projects-grid">
                         <div class="project-card">
                             <img src="/img/Project1.png" alt="Screenshot of Plant Disease Detection Website interface"
                                 class="project-image">
-                            <h3>Plant Disease Detection Website</h3>
-                            <p>
+                            <h3 data-i18n="projects.project1.title">Plant Disease Detection Website</h3>
+                            <p data-i18n="projects.project1.description">
                                 A web-based AI application that detects diseases on plant leaves using an image
                                 classification model. Users can upload a photo of a leaf, and the system will
                                 display the detected disease along with its accuracy level.
@@ -140,8 +145,8 @@
 
                         <!-- Placeholder for future projects -->
                         <div class="project-card">
-                            <h3>More Projects Coming Soon...</h3>
-                            <p>
+                            <h3 data-i18n="projects.comingSoon.title">More Projects Coming Soon...</h3>
+                            <p data-i18n="projects.comingSoon.description">
                                 Stay tuned for upcoming projects as I continue learning and building new things!
                             </p>
                         </div>
@@ -153,31 +158,33 @@
         <!-- Contact Section -->
         <section id="contact">
             <div class="container">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-subtitle">
+                <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">
                     Got a question or just want to say hi? Drop me a message!
                 </p>
 
                 <form class="contact-form" action="#" method="post">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required placeholder="Your name">
+                            <label for="name" data-i18n="contact.form.name">Name</label>
+                            <input type="text" id="name" name="name" required data-i18n="contact.form.namePlaceholder"
+                                placeholder="Your name">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="Your@email.com">
+                            <label for="email" data-i18n="contact.form.email">Email</label>
+                            <input type="email" id="email" name="email" required
+                                data-i18n="contact.form.emailPlaceholder" placeholder="Your@email.com">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Your message here..."
-                            rows="6"></textarea>
+                        <label for="message" data-i18n="contact.form.message">Message</label>
+                        <textarea id="message" name="message" required data-i18n="contact.form.messagePlaceholder"
+                            placeholder="Your message here..." rows="6"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit">Send Message</button>
+                    <button type="submit" class="btn-submit" data-i18n="contact.form.submit">Send Message</button>
                 </form>
             </div>
         </section>
@@ -185,8 +192,11 @@
 
     <!-- Footer -->
     <footer>
-        <p>Made with ☕ by Dody Roky © 2025</p>
+        <p data-i18n="footer.text">Made with ☕ by Dody Roky © 2025</p>
     </footer>
+
+    <!-- Add translation script -->
+    <script src="translations.js"></script>
 </body>
 
 </html>
